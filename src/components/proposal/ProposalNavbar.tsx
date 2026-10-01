@@ -29,12 +29,12 @@ export function ProposalNavbar({ onReplaySplash }: ProposalNavbarProps) {
             />
           </div>
 
-          <div className="flex items-center gap-1.5 text-xs sm:text-sm font-semibold tracking-tight text-slate-900">
-            <span>FORMA</span>
-            <span className="text-[#7607FD] font-mono text-base">×</span>
+          <div className="flex items-center gap-1.5 text-xs sm:text-sm font-semibold tracking-tight text-slate-950">
             <span>PRX</span>
-            <span className="hidden sm:inline-block px-1.5 py-0.5 ml-1 text-[10px] uppercase font-mono tracking-widest text-[#7607FD] bg-purple-50 border border-purple-100 rounded-sm">
-              Media Kit 2026
+            <span className="text-[#7607FD] font-mono text-base font-bold">×</span>
+            <span>GRUPO AURA</span>
+            <span className="hidden sm:inline-block px-1.5 py-0.5 ml-1 text-[10px] uppercase font-mono tracking-widest text-[#7607FD] bg-purple-50 border border-purple-100 rounded-sm font-bold">
+              2026
             </span>
           </div>
         </a>
@@ -45,59 +45,60 @@ export function ProposalNavbar({ onReplaySplash }: ProposalNavbarProps) {
           aria-label="Navegação da proposta"
         >
           <a
+            href="#oportunidade"
+            className="hover:text-slate-950 transition-colors py-1 cursor-pointer focus-visible:outline-2 focus-visible:outline-[#7607FD]"
+          >
+            A Oportunidade
+          </a>
+          <a
+            href="#quem-esta-por-tras"
+            className="hover:text-slate-950 transition-colors py-1 cursor-pointer focus-visible:outline-2 focus-visible:outline-[#7607FD]"
+          >
+            Quem Está por Trás
+          </a>
+          <a
             href="#parceria"
             className="hover:text-slate-950 transition-colors py-1 cursor-pointer focus-visible:outline-2 focus-visible:outline-[#7607FD]"
           >
             A Parceria
           </a>
           <a
-            href="#forma-sem-filtro"
+            href="#prx-pass"
             className="hover:text-slate-950 transition-colors py-1 cursor-pointer focus-visible:outline-2 focus-visible:outline-[#7607FD]"
           >
-            Forma Sem Filtro
+            PRX Pass
           </a>
           <a
-            href="#eventos"
+            href="#escolas"
             className="hover:text-slate-950 transition-colors py-1 cursor-pointer focus-visible:outline-2 focus-visible:outline-[#7607FD]"
           >
-            Eventos PRX
+            Escolas
           </a>
           <a
-            href="#tese-ltv"
+            href="#visao"
             className="hover:text-slate-950 transition-colors py-1 cursor-pointer focus-visible:outline-2 focus-visible:outline-[#7607FD]"
           >
-            Tese & LTV
-          </a>
-          <a
-            href="#modelos"
-            className="hover:text-slate-950 transition-colors py-1 cursor-pointer focus-visible:outline-2 focus-visible:outline-[#7607FD]"
-          >
-            Modelos
-          </a>
-          <a
-            href="#contato"
-            className="hover:text-slate-950 transition-colors py-1 cursor-pointer focus-visible:outline-2 focus-visible:outline-[#7607FD]"
-          >
-            Contato
+            A Visão
           </a>
         </nav>
 
-        {/* Replay Brand Animation Button & CTA */}
-        <div className="flex items-center gap-2 sm:gap-3">
+        {/* Action Buttons */}
+        <div className="flex items-center gap-3">
           <button
             type="button"
             onClick={onReplaySplash}
-            aria-label="Rever animação da marca PRX"
-            className="inline-flex items-center gap-1.5 px-3 py-2 sm:px-3.5 sm:py-2 text-xs font-medium text-slate-700 hover:text-slate-950 bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-md transition-all cursor-pointer focus-visible:outline-2 focus-visible:outline-[#7607FD]"
+            className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-slate-700 hover:text-slate-950 bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-sm transition-colors cursor-pointer focus-visible:outline-2 focus-visible:outline-[#7607FD]"
+            aria-label="Rever a animação de abertura da marca"
           >
             <Play className="w-3.5 h-3.5 text-[#7607FD] fill-[#7607FD]" />
-            <span className="hidden sm:inline">Rever animação</span>
-            <span className="sm:hidden">Animação</span>
+            <span>Rever animação</span>
           </button>
 
           <a
-            href="#contato"
-            className="inline-flex items-center gap-1.5 px-3.5 py-2 sm:px-4 sm:py-2 text-xs sm:text-sm font-semibold text-white bg-slate-950 hover:bg-slate-800 rounded-md shadow-xs transition-colors cursor-pointer focus-visible:outline-2 focus-visible:outline-[#7607FD]"
+            href="https://wa.me/5511989609797"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-3.5 sm:px-4 py-2 text-xs sm:text-sm font-medium text-white bg-slate-950 hover:bg-slate-800 rounded-sm shadow-xs transition-colors cursor-pointer focus-visible:outline-2 focus-visible:outline-[#7607FD]"
           >
             <Sparkles className="w-3.5 h-3.5 text-[#0BD9FD]" />
             <span>Falar com Rafael</span>

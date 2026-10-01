@@ -3,6 +3,7 @@
 
 import Image from "next/image";
 import { Play, Sparkles } from "lucide-react";
+import { AuraLogo } from "@/components/brand/AuraLogo";
 
 interface ProposalFooterProps {
   onReplaySplash: () => void;
@@ -28,11 +29,11 @@ export function ProposalFooter({ onReplaySplash }: ProposalFooterProps) {
                 />
               </div>
               <span className="text-sm font-bold tracking-tight text-slate-950 font-mono">
-                FORMA × PRX
+                PRX × GRUPO AURA
               </span>
             </div>
             <p className="text-xs text-slate-500 mt-2.5 leading-relaxed">
-              Media Kit Executivo 2026 • Apresentado por Rafael Molina. Construindo o maior ecossistema jovem e contínuo do Brasil.
+              &ldquo;A próxima geração precisa de um lugar para acontecer.&rdquo; • Apresentado por Rafael Molina. Construindo o maior ecossistema contínuo de eventos e experiências da juventude.
             </p>
           </div>
 
@@ -41,11 +42,11 @@ export function ProposalFooter({ onReplaySplash }: ProposalFooterProps) {
             <button
               type="button"
               onClick={onReplaySplash}
-              aria-label="Rever animação da marca PRX"
+              aria-label="Rever animação da parceria PRX e Grupo Aura"
               className="inline-flex items-center gap-2 px-4 py-2.5 text-xs font-semibold text-slate-800 bg-slate-100 hover:bg-slate-200 border border-slate-200 rounded-md transition-colors cursor-pointer"
             >
               <Play className="w-3.5 h-3.5 text-[#7607FD] fill-[#7607FD]" />
-              <span>Rever animação da marca</span>
+              <span>Rever animação da parceria</span>
             </button>
 
             <a
@@ -83,7 +84,7 @@ export function ProposalFooter({ onReplaySplash }: ProposalFooterProps) {
           </div>
 
           <div className="font-mono text-[11px] text-slate-400">
-            © 2026 FORMA • PRX • Rafael Molina. Todos os direitos reservados.
+            &copy; 2026 PRX &bull; Grupo Aura &bull; Rafael Molina. Todos os direitos reservados.
           </div>
 
         </div>

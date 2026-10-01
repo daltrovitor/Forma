@@ -19,32 +19,36 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://forma.prx.app.br"),
-  title: "FORMA × PRX | A Empresa da Juventude - Media Kit 2026 Rafael Molina",
+  title: "PRX × GRUPO AURA | A Próxima Geração Precisa de um Lugar para Acontecer",
   description:
-    "Proposta de parceria estratégica entre FORMA, PRX e Rafael Molina: De uma empresa de viagens para o maior ecossistema contínuo da Geração Z no Brasil.",
+    "Proposta de parceria estratégica entre PRX e Grupo Aura. A PRX leva a comunidade. O Grupo Aura transforma comunidade em experiência.",
   keywords: [
-    "FORMA",
     "PRX",
+    "Grupo Aura",
+    "Aura Group",
     "Rafael Molina",
-    "Media Kit 2026",
     "Geração Z",
-    "Formatura",
-    "Fintech Jovem",
-    "Forma Sem Filtro",
+    "Eventos",
+    "Experiências",
+    "PRX UP",
+    "PRX RUN",
+    "PRX FOUNDERS",
+    "PRX PASS",
+    "PRX BREAK",
   ],
   authors: [{ name: "Rafael Molina" }, { name: "Viraweb" }],
   openGraph: {
-    title: "FORMA × PRX | A Empresa da Juventude - Media Kit 2026",
+    title: "PRX × GRUPO AURA | A Próxima Geração Precisa de um Lugar para Acontecer",
     description:
-      "Transformando viagens em memórias eternas e conectando a nova geração a finanças, benefícios, eventos e oportunidades contínuas.",
-    url: "https://forma.prx.app.br",
-    siteName: "FORMA × PRX Media Kit 2026",
+      "A PRX leva a comunidade. O Grupo Aura transforma comunidade em experiência. Proposta de parceria estratégica 2026.",
+    url: "https://prx.app.br",
+    siteName: "PRX × GRUPO AURA",
     images: [
       {
         url: "/brand/prx-logo.png",
         width: 2100,
         height: 635,
-        alt: "FORMA × PRX",
+        alt: "PRX × GRUPO AURA",
       },
     ],
     locale: "pt_BR",

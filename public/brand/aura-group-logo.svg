@@ -1,0 +1,30 @@
+<!-- Hello World -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" role="img" aria-label="Aura Group Logo">
+  <defs>
+    <style>
+      .aura-text {
+        font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        font-weight: 900;
+        fill: #FFFFFF;
+      }
+    </style>
+  </defs>
+
+  <!-- Símbolo Asterisco 6 pontas -->
+  <g transform="translate(195, 260)">
+    <rect x="-26" y="-125" width="52" height="250" rx="6" fill="#FFFFFF" />
+    <rect x="-26" y="-125" width="52" height="250" rx="6" fill="#FFFFFF" transform="rotate(60)" />
+    <rect x="-26" y="-125" width="52" height="250" rx="6" fill="#FFFFFF" transform="rotate(120)" />
+  </g>
+
+  <!-- Tipografia aura™ -->
+  <g transform="translate(360, 230)">
+    <text x="0" y="0" class="aura-text" font-size="145" letter-spacing="-0.04em">aura</text>
+    <text x="328" y="-72" class="aura-text" font-size="32" font-weight="800">TM</text>
+  </g>
+
+  <!-- Tipografia group -->
+  <g transform="translate(360, 365)">
+    <text x="0" y="0" class="aura-text" font-size="145" letter-spacing="-0.04em">group</text>
+  </g>
+</svg>
