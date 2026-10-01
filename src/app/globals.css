@@ -1,0 +1,45 @@
+/* Hello World */
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --brand-primary: #7607FD;
+    --brand-cyan: #0BD9FD;
+    --brand-dark: #0B0B10;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: #ffffff;
+    color: #0b0b10;
+  }
+
+  body {
+    background-color: #ffffff;
+    color: #0b0b10;
+    overflow-x: hidden;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: #7607FD;
+    color: #ffffff;
+  }
+
+  button, a, [role="button"], input[type="button"], input[type="submit"] {
+    cursor: pointer;
+  }
+}
+
+@utility scrollbar-none {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
