@@ -11,7 +11,6 @@ export interface PrxAnimatedLogoProps {
    */
   partsState?: Record<string, boolean>;
   subtitleVisible?: boolean;
-  theme?: "dark" | "light";
 }
 
 export function PrxAnimatedLogo({
@@ -24,7 +23,6 @@ export function PrxAnimatedLogo({
     "letter-x": true,
   },
   subtitleVisible = true,
-  theme = "dark",
 }: PrxAnimatedLogoProps) {
   const uid = useId().replace(/:/g, "");
   const prxsId = `prxs-${uid}`;
@@ -35,20 +33,18 @@ export function PrxAnimatedLogo({
   const isRVisible = partsState["letter-r"] ?? false;
   const isXVisible = partsState["letter-x"] ?? false;
 
-  const letterFill = theme === "dark" ? "#FFFFFF" : "#0B0B10";
-
   return (
     <div className="relative flex flex-col items-center justify-center w-full">
       <svg
-        viewBox="0 0 776.5 181"
+        viewBox="0 0 776.5 220"
         className={className}
         style={style}
         role="img"
-        aria-label="PRX - The Next Pays"
+        aria-label="PRX - the next pays"
         xmlns="http://www.w3.org/2000/svg"
       >
         <defs>
-          {/* Radial gradient for symbol right chevron: normal azul com roxo */}
+          {/* Radial gradient for symbol right chevron: authentic azul com roxo */}
           <radialGradient id={prxsId} gradientUnits="userSpaceOnUse" cx="330" cy="172" r="140">
             <stop offset="0" stopColor="#7607FD" />
             <stop offset="0.42" stopColor="#6430FA" />
@@ -56,7 +52,7 @@ export function PrxAnimatedLogo({
             <stop offset="1" stopColor="#0BD9FD" />
           </radialGradient>
 
-          {/* Linear gradient for letter X: normal azul com roxo */}
+          {/* Linear gradient for letter X: authentic azul com roxo */}
           <linearGradient id={prxxId} gradientUnits="userSpaceOnUse" x1="450" y1="310" x2="570" y2="405">
             <stop offset="0" stopColor="#7C04F0" />
             <stop offset="0.4" stopColor="#6420F9" />
@@ -65,7 +61,7 @@ export function PrxAnimatedLogo({
           </linearGradient>
         </defs>
 
-        {/* 1. SÍMBOLO (Symbol: Left chevron black with white outline + Right chevron blue/purple gradient) */}
+        {/* 1. SÍMBOLO (Left chevron SOLID WHITE + Right chevron blue/purple gradient) */}
         <g
           id="part-symbol"
           style={{
@@ -76,13 +72,10 @@ export function PrxAnimatedLogo({
           }}
         >
           <g transform="translate(-214 -92)">
-            {/* Left Chevron: Black with crisp white outline on dark background */}
+            {/* Left Chevron: Solid White as in original reference */}
             <path
               d="M214 119H312L340 147.8H282.2L333.7 199.7L261.2 272.7H221L293.5 199Z"
-              fill="#0B0B10"
-              stroke={theme === "dark" ? "#FFFFFF" : "none"}
-              strokeWidth={theme === "dark" ? 2.5 : 0}
-              strokeLinejoin="round"
+              fill="#FFFFFF"
             />
             {/* Right Chevron: Authentic azul com roxo gradient */}
             <path
@@ -92,7 +85,7 @@ export function PrxAnimatedLogo({
           </g>
         </g>
 
-        {/* 2. LETRA P (Branca na entrada e no tema dark) */}
+        {/* 2. LETRA P (Solid White) */}
         <g
           id="part-letter-p"
           style={{
@@ -105,12 +98,12 @@ export function PrxAnimatedLogo({
           <g transform="translate(205.0 -265.4)">
             <path
               d="M101 306.2H174A31.3 31.3 0 0 1 174 368.8H118.5V405.6H101ZM118.5 320.8H172A15.8 16.7 0 0 1 172 354.2H118.5Z"
-              fill={letterFill}
+              fill="#FFFFFF"
             />
           </g>
         </g>
 
-        {/* 3. LETRA R (Branca na entrada e no tema dark) */}
+        {/* 3. LETRA R (Solid White) */}
         <g
           id="part-letter-r"
           style={{
@@ -123,12 +116,12 @@ export function PrxAnimatedLogo({
           <g transform="translate(205.0 -265.4)">
             <path
               d="M279.2 306.2H350.5A32.5 31.6 0 0 1 350.5 369.4H348L383.5 405.6H361.2L324.2 369.4H296.8V405.6H279.2ZM296.8 321H350.5A16 16.95 0 0 1 350.5 354.9H296.8Z"
-              fill={letterFill}
+              fill="#FFFFFF"
             />
           </g>
         </g>
 
-        {/* 4. LETRA X (Na cor normal azul com roxo) */}
+        {/* 4. LETRA X (Authentic azul com roxo gradient) */}
         <g
           id="part-letter-x"
           style={{
@@ -145,33 +138,29 @@ export function PrxAnimatedLogo({
             />
           </g>
         </g>
-      </svg>
 
-      {/* Institutional Subtitle & Accent Line */}
-      <div
-        className="w-full max-w-[540px] flex flex-col items-center mt-3 sm:mt-4 transition-all duration-700 ease-out"
-        style={{
-          opacity: subtitleVisible ? 1 : 0,
-          transform: subtitleVisible ? "translateY(0)" : "translateY(16px)",
-          willChange: "transform, opacity",
-        }}
-      >
-        <div className="w-full flex items-center justify-between text-[10px] sm:text-[12px] md:text-[13px] font-semibold tracking-[0.28em] text-slate-300 uppercase select-none">
-          <span>THE</span>
-          <span className="text-[#7607FD]">•</span>
-          <span>NEXT</span>
-          <span className="text-[#0BD9FD]">•</span>
-          <span>PAYS</span>
-        </div>
-        <div
-          className="h-[2px] w-28 sm:w-36 mt-1.5 sm:mt-2 rounded-full transition-all duration-700 ease-out"
+        {/* Tagline the next pays */}
+        <g
           style={{
-            background: "linear-gradient(90deg, #7607FD 0%, #0BD9FD 100%)",
-            transform: subtitleVisible ? "scaleX(1)" : "scaleX(0)",
-            transformOrigin: "center",
+            opacity: subtitleVisible ? 1 : 0,
+            transform: subtitleVisible ? "translateY(0px)" : "translateY(15px)",
+            transition: "all 0.6s ease-out 0.2s",
           }}
-        />
-      </div>
+        >
+          <text
+            x="541"
+            y="195"
+            fill="#FFFFFF"
+            fontSize="28"
+            fontWeight="600"
+            fontFamily="'Inter', -apple-system, BlinkMacSystemFont, sans-serif"
+            letterSpacing="0.22em"
+            textAnchor="middle"
+          >
+            the next pays
+          </text>
+        </g>
+      </svg>
     </div>
   );
 }
@@ -185,21 +174,18 @@ export interface PrxStaticLogoProps {
 export function PrxStaticLogo({
   className = "w-full h-auto",
   style,
-  theme = "dark",
 }: PrxStaticLogoProps) {
   const uid = useId().replace(/:/g, "");
   const prxsId = `prxs-static-${uid}`;
   const prxxId = `prxx-static-${uid}`;
 
-  const letterFill = theme === "dark" ? "#FFFFFF" : "#0B0B10";
-
   return (
     <svg
-      viewBox="0 0 776.5 181"
+      viewBox="0 0 776.5 220"
       className={className}
       style={style}
       role="img"
-      aria-label="PRX - The Next Pays"
+      aria-label="PRX - the next pays"
       xmlns="http://www.w3.org/2000/svg"
     >
       <defs>
@@ -217,14 +203,11 @@ export function PrxStaticLogo({
         </linearGradient>
       </defs>
 
-      {/* Símbolo com parte preta e parte azul com roxo */}
+      {/* Símbolo com parte esquerda branca sólida e parte direita azul com roxo */}
       <g transform="translate(-214 -92)">
         <path
           d="M214 119H312L340 147.8H282.2L333.7 199.7L261.2 272.7H221L293.5 199Z"
-          fill="#0B0B10"
-          stroke={theme === "dark" ? "#FFFFFF" : "none"}
-          strokeWidth={theme === "dark" ? 2.5 : 0}
-          strokeLinejoin="round"
+          fill="#FFFFFF"
         />
         <path
           d="M414 92H464.5L383.3 173L458.2 253.2H359.5L332 223.2H389.5L339.2 167.8Z"
@@ -232,21 +215,35 @@ export function PrxStaticLogo({
         />
       </g>
 
-      {/* Letras P e R brancas e X em degradê azul com roxo */}
+      {/* Letras P e R em branco puro (#FFFFFF) e Letra X no degradê original azul com roxo */}
       <g transform="translate(205.0 -265.4)">
         <path
           d="M101 306.2H174A31.3 31.3 0 0 1 174 368.8H118.5V405.6H101ZM118.5 320.8H172A15.8 16.7 0 0 1 172 354.2H118.5Z"
-          fill={letterFill}
+          fill="#FFFFFF"
         />
         <path
           d="M279.2 306.2H350.5A32.5 31.6 0 0 1 350.5 369.4H348L383.5 405.6H361.2L324.2 369.4H296.8V405.6H279.2ZM296.8 321H350.5A16 16.95 0 0 1 350.5 354.9H296.8Z"
-          fill={letterFill}
+          fill="#FFFFFF"
         />
         <path
           d="M447.5 306.5H471.5L570.6 405.6H546.6L508.4 367.5L469.8 405.6H447L496 355.5ZM548 306.5H571.5L527 351L515.5 339.5Z"
           fill={`url(#${prxxId})`}
         />
       </g>
+
+      {/* Tagline the next pays */}
+      <text
+        x="541"
+        y="195"
+        fill="#FFFFFF"
+        fontSize="28"
+        fontWeight="600"
+        fontFamily="'Inter', -apple-system, BlinkMacSystemFont, sans-serif"
+        letterSpacing="0.22em"
+        textAnchor="middle"
+      >
+        the next pays
+      </text>
     </svg>
   );
 }
