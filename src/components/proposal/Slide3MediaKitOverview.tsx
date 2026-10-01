@@ -3,6 +3,7 @@
 
 import Image from "next/image";
 import { PdfSlideFrame } from "./PdfSlideFrame";
+import { PrxStaticLogo } from "@/components/brand/PrxAnimatedLogo";
 
 export function Slide3MediaKitOverview() {
   return (
@@ -55,13 +56,12 @@ export function Slide3MediaKitOverview() {
         <div className="flex flex-col">
           {/* Black Logo Container */}
           <div className="w-full h-24 sm:h-28 bg-[#0B0B10] rounded-sm flex items-center justify-center p-4 border border-slate-900 shadow-xs">
-            <Image
-              src="/brand/prx-compact-on-light.svg"
-              alt="PRX Logo"
-              width={180}
-              height={70}
-              className="max-h-full w-auto object-contain filter invert drop-shadow-sm"
-            />
+            <div className="h-10 sm:h-12 w-40 flex items-center justify-center">
+              <PrxStaticLogo
+                theme="dark"
+                className="w-full h-full object-contain filter drop-shadow-[0_4px_12px_rgba(118,7,253,0.3)]"
+              />
+            </div>
           </div>
 
           {/* Heading with Underline */}
@@ -97,13 +97,12 @@ export function Slide3MediaKitOverview() {
         <div className="flex flex-col">
           {/* Black Logo Container */}
           <div className="w-full h-24 sm:h-28 bg-[#0B0B10] rounded-sm flex items-center justify-center p-4 border border-slate-900 shadow-xs">
-            <Image
-              src="/brand/prx-compact-on-light.svg"
-              alt="PRX Logo Eventos"
-              width={180}
-              height={70}
-              className="max-h-full w-auto object-contain filter invert drop-shadow-sm"
-            />
+            <div className="h-10 sm:h-12 w-40 flex items-center justify-center">
+              <PrxStaticLogo
+                theme="dark"
+                className="w-full h-full object-contain filter drop-shadow-[0_4px_12px_rgba(118,7,253,0.3)]"
+              />
+            </div>
           </div>
 
           {/* Heading with Underline */}

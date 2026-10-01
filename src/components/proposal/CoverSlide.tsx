@@ -3,6 +3,7 @@
 
 import Image from "next/image";
 import { ArrowDown, Play, Sparkles } from "lucide-react";
+import { PrxStaticLogo } from "@/components/brand/PrxAnimatedLogo";
 
 interface CoverSlideProps {
   onReplaySplash: () => void;
@@ -50,16 +51,12 @@ export function CoverSlide({ onReplaySplash }: CoverSlideProps) {
 
           <div className="hidden md:block w-px h-16 bg-slate-800" />
 
-          {/* Logo 2: PRX */}
+          {/* Logo 2: PRX with white letters & normal azul/roxo/preto */}
           <div className="flex flex-col items-center justify-center">
             <div className="relative w-40 sm:w-52 h-16 sm:h-20 flex items-center justify-center">
-              <Image
-                src="/brand/prx-compact-on-light.svg"
-                alt="Logo PRX"
-                width={240}
-                height={130}
-                className="w-full h-full object-contain filter drop-shadow-[0_4px_16px_rgba(118,7,253,0.4)] invert"
-                priority
+              <PrxStaticLogo
+                theme="dark"
+                className="w-full h-full object-contain filter drop-shadow-[0_4px_16px_rgba(118,7,253,0.4)]"
               />
             </div>
             <span className="text-[11px] font-mono tracking-widest text-[#0BD9FD] uppercase mt-1">
