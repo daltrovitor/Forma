@@ -99,11 +99,12 @@ export function PrxAnimatedLogo({
             <path
               d="M101 306.2H174A31.3 31.3 0 0 1 174 368.8H118.5V405.6H101ZM118.5 320.8H172A15.8 16.7 0 0 1 172 354.2H118.5Z"
               fill="#FFFFFF"
+              fillRule="evenodd"
             />
           </g>
         </g>
 
-        {/* 3. LETRA R (Solid White) */}
+        {/* 3. LETRA R (Solid White with counter hole) */}
         <g
           id="part-letter-r"
           style={{
@@ -117,6 +118,7 @@ export function PrxAnimatedLogo({
             <path
               d="M279.2 306.2H350.5A32.5 31.6 0 0 1 350.5 369.4H348L383.5 405.6H361.2L324.2 369.4H296.8V405.6H279.2ZM296.8 321H350.5A16 16.95 0 0 1 350.5 354.9H296.8Z"
               fill="#FFFFFF"
+              fillRule="evenodd"
             />
           </g>
         </g>
@@ -215,15 +217,17 @@ export function PrxStaticLogo({
         />
       </g>
 
-      {/* Letras P e R em branco puro (#FFFFFF) e Letra X no degradê original azul com roxo */}
+      {/* Letras P e R em branco puro (#FFFFFF) com furação interna (evenodd) e Letra X no degradê original azul com roxo */}
       <g transform="translate(205.0 -265.4)">
         <path
           d="M101 306.2H174A31.3 31.3 0 0 1 174 368.8H118.5V405.6H101ZM118.5 320.8H172A15.8 16.7 0 0 1 172 354.2H118.5Z"
           fill="#FFFFFF"
+          fillRule="evenodd"
         />
         <path
           d="M279.2 306.2H350.5A32.5 31.6 0 0 1 350.5 369.4H348L383.5 405.6H361.2L324.2 369.4H296.8V405.6H279.2ZM296.8 321H350.5A16 16.95 0 0 1 350.5 354.9H296.8Z"
           fill="#FFFFFF"
+          fillRule="evenodd"
         />
         <path
           d="M447.5 306.5H471.5L570.6 405.6H546.6L508.4 367.5L469.8 405.6H447L496 355.5ZM548 306.5H571.5L527 351L515.5 339.5Z"
